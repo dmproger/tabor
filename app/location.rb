@@ -1,7 +1,7 @@
+require_relative 'parentable'
+
 module App
   class Location < ActiveRecord::Base
-    require_relative 'parentable'
-
     TYPES = { region: 0, district: 1, city: 2, street: 3, address: 4 }
     DEFAULT_TYPE = TYPES[:region]
 
