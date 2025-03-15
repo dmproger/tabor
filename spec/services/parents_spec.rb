@@ -26,7 +26,10 @@ RSpec.describe App::Parents do
   end
 
   shared_examples 'parents' do |model, block|
-    before { model.create!(seed) }
+    before do
+      model.delete_all
+      model.create!(seed)
+    end
 
     it 'returns correct records' do
       for id, parent_ids in parents
@@ -37,8 +40,6 @@ RSpec.describe App::Parents do
       end
     end
   end
-
-  before { App::Location.delete_all }
 
   describe '.via_orm' do
     it_behaves_like 'parents', App::Location, ->(record) { described_class.via_orm(record) }
