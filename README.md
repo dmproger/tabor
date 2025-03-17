@@ -60,16 +60,16 @@ bundle exec rspec
 
 # Solution
 
-I have some changes to original code for several improvements:
+I've made a few changes to original code for some improvements:
 - any `Parentable` model has name convension for naming of parent node in database (`parent_id`)
 - there is special service `Parents` that make work for any kind of `Parentable` model (non only `Location`)
 - `Parents` has two interface methods `via_orm` and `via_sql` (Postgres) for getting parent nodes
 - enum `Location::TYPES` is a hash with values
 
-`Sort` service is not ready for now, because i have some questions
+`Sort` service is __not ready for now__, because i have some questions
 
-I'm packed this solution in embed __plain Ruby application__:
-- cli `rake` tasks for database (need `ENVIRONMENT` variable provided)
+I've packed this solution in embed __plain Ruby application__:
+- `rake` tasks for database (need `ENVIRONMENT` variable provided)
 - only `test` environment available!
 - specs for `Parents` service
 
