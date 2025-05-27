@@ -1,4 +1,4 @@
-ENV['ENV'] ||= 'test'
+ENV['ENV'] = 'test'
 
 require 'rake'
 require 'byebug'
