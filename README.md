@@ -56,7 +56,7 @@ I've packed this solution in embed __plain Ruby application__ (not Rails):
 
 I've made a few changes to original code for some improvements:
 - any parentable model has name convension for naming of parent node in database (`parent_id`)
-- there is special service `Parents` that make work for any kind of `Parentable` model (non only `Location`)
+- there is special service `Parents` that make work for any kind of `Parentable` model
 - `Parents` has two interface methods `via_orm` and `via_sql` (Postgres) for getting parent nodes
 - enum `Location::TYPES` is a hash with values
 
