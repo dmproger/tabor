@@ -1,3 +1,5 @@
+ENV['ENV'] ||= 'dev'
+
 require 'bundler/setup'
 
 ROOT = __dir__
